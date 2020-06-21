@@ -23,7 +23,7 @@ Common parameters:
 0.1
 0
 1
-10000
+100000
 0.9
 0.2
 0
@@ -147,7 +147,7 @@ Precipitation and temperature correction for catchments:
     Sub-catchment :  1220009
 
     Nash-Sutcliffe efficiency                           0.89
-    Root mean square error                              38.60
+    Root mean square error                              38.59
     Bias (volume error)                                 0.03
     Volume error correction factor                      0.97
     Pearson's product-moment correlation coefficient    0.89
@@ -165,7 +165,7 @@ Precipitation and temperature correction for catchments:
     Watercourse outlet :  1220009
 
     Nash-Sutcliffe efficiency                           0.89
-    Root mean square error                              38.60
+    Root mean square error                              38.59
     Bias (volume error)                                 0.03
     Volume error correction factor                      0.97
     Pearson's product-moment correlation coefficient    0.89

@@ -13,7 +13,7 @@ Lake evaporation constant          LAKE_EPOT_PAR       : 4.10177E-4
 Rating curve constant              KLAKE               : 0.1
 Rating curve saddle point (m)      DELTA_LEVEL         : 0.0
 Rating curve exponent              NLAKE               : 1.0
-Maximum upper zone/lake water level MAXIMUM_LEVEL      : 1.0E4
+Maximum upper zone/lake water level MAXIMUM_LEVEL      : 1.0E5
 Density of ice                     DENSITY_ICE         : 0.9
 Initial soil moisture        INITIAL_SOIL_MOISTURE     : 0.2
 Initial upper zone           INITIAL_UPPER_ZONE        : 0.0
