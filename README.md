@@ -8,5 +8,5 @@ Precipitation-runoff models are used for applications that require simulation of
 ## References
 Beldring, S. 2002. Multi-criteria validation of a precipitation-runoff model. Journal of Hydrology 257, 189-211. https://www.sciencedirect.com/science/article/pii/S0022169401005418
 
-Beldring, S., Engeland, K., Roald, L.A., Sælthun, N.R., Voksø, A. 2003. Estimation of parameters in a distributed precipitation-runoff model for Norway. Hydrology and Earth System Sciences 7, 304-316. https://www.sciencedirect.com/science/article/pii/S0022169401005418
+Beldring, S., Engeland, K., Roald, L.A., Sælthun, N.R., Voksø, A. 2003. Estimation of parameters in a distributed precipitation-runoff model for Norway. Hydrology and Earth System Sciences 7, 304-316. https://doi.org/10.5194/hess-7-304-2003
 
