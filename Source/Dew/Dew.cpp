@@ -4376,11 +4376,12 @@ void WriteReducedBinaryGrid(DistributedElement * const Dew, DateTime datetime, i
     while (k < numLand)
     {
         //      if (Dew[k].GetGeoIndex()==ELEMENT(i,j)) {
-        if (Dew[k].GetInterceptionLoss() > missingData &&
-                Dew[k].GetTranspSoilEvap() > missingData &&
-                Dew[k].GetLakeEvap() > missingData)
+      //        if (Dew[k].GetInterceptionLoss() > missingData &&
+      //                Dew[k].GetTranspSoilEvap() > missingData &&
+      //                Dew[k].GetLakeEvap() > missingData)
             //      eva[k] = (float) ((Dew[k].GetInterceptionLoss() + Dew[k].GetTranspSoilEvap() +
             //                         Dew[k].GetLakeEvap())*1000.0);
+        if (Dew[k].GetEvapotranspiration() > missingData)
         {
             eva[k] = (float)((Dew[k].GetEvapotranspiration()) * 1000.0);
         }
@@ -4900,11 +4901,12 @@ void WriteBinaryGrid(DistributedElement * const Dew, DateTime datetime, int numL
                 if (Dew[k].GetGeoIndex() == ELEMENT(i, j))
                 {
                     //          if (Dew[k].GetAccumulatedPrecipitation() > missingData)
-                    if (Dew[k].GetInterceptionLoss() > missingData &&
-                            Dew[k].GetTranspSoilEvap() > missingData &&
-                            Dew[k].GetLakeEvap() > missingData)
+		  //                    if (Dew[k].GetInterceptionLoss() > missingData &&
+		  //                            Dew[k].GetTranspSoilEvap() > missingData &&
+		  //                            Dew[k].GetLakeEvap() > missingData)
                         //            eva[ELEMENT(i,j)] = (unsigned short int) ((Dew[k].GetInterceptionLoss() + Dew[k].GetTranspSoilEvap() +
                         //                                                       Dew[k].GetLakeEvap())*1000.0);
+		    if (Dew[k].GetEvapotranspiration() > missingData)
                     {
                         eva[ELEMENT(i, j)] = (unsigned short int) ((Dew[k].GetEvapotranspiration()) * 1000.0);
                     }
@@ -5491,9 +5493,10 @@ void WriteAsciiGrid(DistributedElement * const Dew, DateTime datetime, int numLa
             {
                 if (Dew[k].GetGeoIndex() == ELEMENT(i, j))
                 {
-                    if (Dew[k].GetInterceptionLoss() > missingData &&
-                            Dew[k].GetTranspSoilEvap() > missingData &&
-                            Dew[k].GetLakeEvap() > missingData)
+		  //                    if (Dew[k].GetInterceptionLoss() > missingData &&
+		  //                            Dew[k].GetTranspSoilEvap() > missingData &&
+		  //                            Dew[k].GetLakeEvap() > missingData)
+		    if (Dew[k].GetEvapotranspiration() > missingData)
                     {
                         fileEvap.width(15);
                         fileEvap.precision(5);
