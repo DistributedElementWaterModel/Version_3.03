@@ -267,7 +267,7 @@ void ReadLandUse(DistributedElement * const Dew, int nRows, int nCols, int noDat
   }
 
   // Read elevation of grid cells
-  previousValue=-9999.0;
+  //  previousValue=-9999.0;
   /*  cout << " File with grid cell elevations: ";
       cin >> fileName;
       cout << endl;*/
@@ -297,17 +297,17 @@ void ReadLandUse(DistributedElement * const Dew, int nRows, int nCols, int noDat
   }
   for (i=0; i<nRows*nCols; i++) {
     finElevation >> value;
-    //    if (value<0.0) value=0.0;
-    if (value<0.0 && previousValue>=0.0) value=previousValue;
-    else if (value<0.0) value=0.0;
+    if (value<0.0) value=0.0;
+    //    if (value<0.0 && previousValue>=0.0) value=previousValue;
+    //    else if (value<0.0) value=0.0;
     Dew[i].SetElevation(value);
-    previousValue=value;
+    //    previousValue=value;
   }
   finElevation.close();
   // Read end
 
   // Read slope length of grid cells
-  previousValue=-9999.0;
+  //  previousValue=-9999.0;
   /*  cout << " File with slope lengths: ";
       cin >> fileName;
       cout << endl;*/
@@ -337,17 +337,17 @@ void ReadLandUse(DistributedElement * const Dew, int nRows, int nCols, int noDat
   }
   for (i=0; i<nRows*nCols; i++) {
     finSlopeLength >> value;
-    //    if (value<0.0) value=0.0;
-    if (value<0.0 && previousValue>=0.0) value=previousValue;
-    else if (value<0.0) value=0.0;
+    if (value<0.0) value=0.0;
+    //    if (value<0.0 && previousValue>=0.0) value=previousValue;
+    //    else if (value<0.0) value=0.0;
     Dew[i].SetSlopeLength(value);
-    previousValue=value;
+    //    previousValue=value;
   }
   finSlopeLength.close();
   // Read end
 
   // Read slope angle of grid cells
-  previousValue=-9999.0;
+  //  previousValue=-9999.0;
   /*  cout << " File with slope angles: ";
       cin >> fileName;
       cout << endl;*/
@@ -377,17 +377,17 @@ void ReadLandUse(DistributedElement * const Dew, int nRows, int nCols, int noDat
   }
   for (i=0; i<nRows*nCols; i++) {
     finSlopeAngle >> value;
-    //    if (value<0.0) value=0.0;
-    if (value<0.0 && previousValue>=0.0) value=previousValue;
-    else if (value<0.0) value=0.0;
+    if (value<0.0) value=0.0;
+    //    if (value<0.0 && previousValue>=0.0) value=previousValue;
+    //    else if (value<0.0) value=0.0;
     Dew[i].SetSlopeAngle(value);
-    previousValue=value;
+    //    previousValue=value;
   }
   finSlopeAngle.close();
   // Read end
 
   // Read slope aspect of grid cells
-  previousValue=-9999.0;
+  //  previousValue=-9999.0;
   /*  cout << " File with slope aspects: ";
       cin >> fileName;
       cout << endl;*/
@@ -417,17 +417,17 @@ void ReadLandUse(DistributedElement * const Dew, int nRows, int nCols, int noDat
   }
   for (i=0; i<nRows*nCols; i++) {
     finAspect >> value;
-    //    if (value<0.0) value=0.0;
-    if (value<0.0 && previousValue>=0.0) value=previousValue;
-    else if (value<0.0) value=0.0;
+    if (value<0.0) value=0.0;
+    //    if (value<0.0 && previousValue>=0.0) value=previousValue;
+    //    else if (value<0.0) value=0.0;
     Dew[i].SetAspect(value);
-    previousValue=value;
+    //    previousValue=value;
   }
   finAspect.close();
   // Read end
 
   // Read percentage of grid cells covered by lakes
-  previousValue=-9999.0;
+  //  previousValue=-9999.0;
   /*cout << " File with lake percentages: ";
     cin >> fileName;
     cout << endl;*/
@@ -457,17 +457,17 @@ void ReadLandUse(DistributedElement * const Dew, int nRows, int nCols, int noDat
   }
   for (i=0; i<nRows*nCols; i++) {
     finLakePercent >> value;
-    //    if (value<0.0) value=0.0;
-    if (value<0.0 && previousValue>=0.0) value=previousValue;
-    else if (value<0.0) value=0.0;
+    if (value<0.0) value=0.0;
+    //    if (value<0.0 && previousValue>=0.0) value=previousValue;
+    //    else if (value<0.0) value=0.0;
     Dew[i].SetLakePercent(value);
-    previousValue=value;
+    //    previousValue=value;
   }
   finLakePercent.close();
   // Read end
 
   // Read percentage of grid cells covered by forest
-  previousValue=-9999.0;
+  //  previousValue=-9999.0;
   /*cout << " File with forest percentages: ";
     cin >> fileName;
     cout << endl; */
@@ -497,17 +497,17 @@ void ReadLandUse(DistributedElement * const Dew, int nRows, int nCols, int noDat
   }
   for (i=0; i<nRows*nCols; i++) {
     finForestPercent >> value;
-    //    if (value<0.0) value=0.0;
-    if (value<0.0 && previousValue>=0.0) value=previousValue;
-    else if (value<0.0) value=0.0;
+    if (value<0.0) value=0.0;
+    //    if (value<0.0 && previousValue>=0.0) value=previousValue;
+    //    else if (value<0.0) value=0.0;
     Dew[i].SetForestPercent(value);
-    previousValue=value;
+    //    previousValue=value;
   }
   finForestPercent.close();
   // Read end
 
   // Read percentage of grid cells covered by bogs
-  previousValue=-9999.0;
+  //  previousValue=-9999.0;
   /*cout << " File with bog percentages: ";
     cin >> fileName;
     cout << endl;*/
@@ -537,17 +537,17 @@ void ReadLandUse(DistributedElement * const Dew, int nRows, int nCols, int noDat
   }
   for (i=0; i<nRows*nCols; i++) {
     finBogPercent >> value;
-    //    if (value<0.0) value=0.0;
-    if (value<0.0 && previousValue>=0.0) value=previousValue;
-    else if (value<0.0) value=0.0;
+    if (value<0.0) value=0.0;
+    //    if (value<0.0 && previousValue>=0.0) value=previousValue;
+    //    else if (value<0.0) value=0.0;
     Dew[i].SetBogPercent(value);
-    previousValue=value;
+    //    previousValue=value;
   }
   finBogPercent.close();
   // Read end
 
   // Read percentage of grid cells covered by glaciers
-  previousValue=-9999.0;
+  //  previousValue=-9999.0;
   /*cout << " File with glacier percentages: ";
     cin >> fileName;
     cout << endl;*/
@@ -577,17 +577,17 @@ void ReadLandUse(DistributedElement * const Dew, int nRows, int nCols, int noDat
   }
   for (i=0; i<nRows*nCols; i++) {
     finGlacierPercent >> value;
-    //    if (value<0.0) value=0.0;
-    if (value<0.0 && previousValue>=0.0) value=previousValue;
-    else if (value<0.0) value=0.0;
+    if (value<0.0) value=0.0;
+    //    if (value<0.0 && previousValue>=0.0) value=previousValue;
+    //    else if (value<0.0) value=0.0;
     Dew[i].SetGlacierPercent(value);
-    previousValue=value;
+    //    previousValue=value;
   }
   finGlacierPercent.close();
   // Read end
 
   // Read elevation of glacier surface
-  previousValue=-9999.0;
+  //  previousValue=-9999.0;
   /*cout << " File with glacier surface elevations: ";
     cin >> fileName;
     cout << endl;*/
@@ -617,17 +617,17 @@ void ReadLandUse(DistributedElement * const Dew, int nRows, int nCols, int noDat
   }
   for (i=0; i<nRows*nCols; i++) {
     finGlacierSurfaceElevation >> value;
-    //    if (value<0.0) value=0.0;
-    if (value<0.0 && previousValue>=0.0) value=previousValue;
-    else if (value<0.0) value=0.0;
+    if (value<0.0) value=0.0;
+    //    if (value<0.0 && previousValue>=0.0) value=previousValue;
+    //    else if (value<0.0) value=0.0;
     Dew[i].SetGlacierSurfaceElevation(value);
-    previousValue=value;
+    //    previousValue=value;
   }
   finGlacierSurfaceElevation.close();
   // Read end
 
   // Read thickness of glacier ice
-  previousValue=-9999.0;
+  //  previousValue=-9999.0;
   /*cout << " File with glacier ice thickness: ";
     cin >> fileName;
     cout << endl;*/
@@ -657,17 +657,17 @@ void ReadLandUse(DistributedElement * const Dew, int nRows, int nCols, int noDat
   }
   for (i=0; i<nRows*nCols; i++) {
     finGlacierIceThickness >> value;
-    //    if (value<0.0) value=0.0;
-    if (value<0.0 && previousValue>=0.0) value=previousValue;
-    else if (value<0.0) value=0.0;
+    if (value<0.0) value=0.0;
+    //    if (value<0.0 && previousValue>=0.0) value=previousValue;
+    //    else if (value<0.0) value=0.0;
     Dew[i].SetGlacierIceThickness(value);
-    previousValue=value;
+    //    previousValue=value;
   }
   finGlacierIceThickness.close();
   // Read end
 
   // Read tree level for grid cells
-  previousValue=-9999.0;
+  //  previousValue=-9999.0;
   /*cout << " File with tree levels: ";
     cin >> fileName;
     cout << endl;*/
@@ -697,11 +697,11 @@ void ReadLandUse(DistributedElement * const Dew, int nRows, int nCols, int noDat
   }
   for (i=0; i<nRows*nCols; i++) {
     finTreeLevel >> value;
-    //    if (value<0.0) value=0.0;
-    if (value<0.0 && previousValue>=0.0) value=previousValue;
-    else if (value<0.0) value=0.0;
+    if (value<0.0) value=0.0;
+    //    if (value<0.0 && previousValue>=0.0) value=previousValue;
+    //    else if (value<0.0) value=0.0;
     Dew[i].SetTreeLevel(value);
-    previousValue=value;
+    //    previousValue=value;
   }
   finTreeLevel.close();
   // Read end
