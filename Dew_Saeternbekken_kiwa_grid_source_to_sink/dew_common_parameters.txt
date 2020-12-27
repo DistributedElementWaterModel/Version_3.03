@@ -4,10 +4,10 @@ Number of temperature series       NUM_TEMP_SERIES     : 1
 Prec. grad. low  per 100 m         PREC_GRAD           : 1.0
 Prec. grad. high per 100 m         PREC_GRAD           : 1.0
 Altitude for 50 % reduction        GRAD_CHANGE_ALT     : 0
-Prec. correction for rain          PREC_CORR_RAIN      : .797657641
+Prec. correction for rain          PREC_CORR_RAIN      : .786843493
 Additional prec. corr. for snow    PREC_CORR_SNOW      : 1.0
-Temp. lapse rate dry days          LAPSE_DRY           : -3.0000E-6
-Temp. lapse rate precip. days      LAPSE_WET           : -3.0000E-6
+Temp. lapse rate dry days          LAPSE_DRY           : -1.0000E-6
+Temp. lapse rate precip. days      LAPSE_WET           : -1.0000E-6
 Lake temperature memory (days)     DAY_TEMP_MEMORY     : 30.0
 Lake evaporation constant          LAKE_EPOT_PAR       : 1.00730E-4
 Rating curve constant              KLAKE               : .002463478

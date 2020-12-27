@@ -1,0 +1,6 @@
+Type                    No.     ManningRoughness
+Corine24                0       .398947657
+Corine1+3               1       .398947657
+Corine2+7+23+25         2       .398947657
+Corine35                3       .398947657
+Corine21                4       .398947657
