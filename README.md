@@ -10,5 +10,17 @@ Beldring, S. 2002. Multi-criteria validation of a precipitation-runoff model. Jo
 
 Beldring, S., Engeland, K., Roald, L.A., Sælthun, N.R., Voksø, A. 2003. Estimation of parameters in a distributed precipitation-runoff model for Norway. Hydrology and Earth System Sciences 7, 304-316. https://doi.org/10.5194/hess-7-304-2003
 
+Li, H., Beldring, S., Xu, C.-Y. 2014. Implementation and testing of routing algorithms in the distributed Hydrologiska Byråns Vattenbalansavdelning model for mountainous catchments. Hydrology Research, 45.3, 322-332. https://doi.org/10.2166/nh.2013.009
+
+Li, H., Beldring, S., Xu, C.-Y., Huss, M., Melvold, K., Jain, S.K. 2015. Integrating a glacier retreat model into a hydrological model – Case studies of three glacierised catchments in Norway and Himalayan region, Journal of Hydrology 527, 656-667. http://dx.doi.org/10.1016/j.jhydrol.2015.05.017
+
+Li, H., Xu, C.-Y., Beldring, S. 2015. How much can we gain with increasing model complexity with the same model concepts? Journal of Hydrology 527, 858-871. http://dx.doi.org/10.1016/j.jhydrol.2015.05.044
+
+Huang, S., Eisner, S., Magnusson, J., Lussana, C., Yang, X., Beldring, S. 2019. Improvements of the spatially distributed hydrological modelling using the HBV model at 1 km resolution for Norway. Journal of Hydrology 557:123585, https://doi.org/10.1016/j.jhydrol.2019.03.051
+
+Grover, S., Tayal, S., Beldring, S., Li, H. 2020. Modeling Hydrological Processes in Ungauged Snow-Fed Catchment of Western Himalaya. Water Resources 47(6), 987–995, https://doi.org/10.1134/S0097807820060147
+
+Erlandsen, H.B., Beldring, S., Eisner, S., Hisdal, H., Huang, S., Tallaksen, L.M. 2021. Constraining the HBV model for robust water balance assessments in a cold climate. Hydrology Research nh2021132, https://doi.org/10.2166/nh.2021.132 
+
 ## Liability disclaimer
 This software is provided by the provider "as is" and "with all faults" without warranty of any kind, either express or implied. By downloading this software you agree that the use of the software is done at your own risk and with agreement that you will be solely responsible for any damage to your computer system or loss of data that results from such activities. In no event shall the provider be liable to you or any third parties for any special, punitive, incidental, indirect or consequential damages of any kind, or any damages whatsoever, including, without limitation, those resulting from loss of use, data or profits, and on any theory of liability, arising out of or in connection with the use of this software.
