@@ -16,7 +16,7 @@ Li, H., Beldring, S., Xu, C.-Y., Huss, M., Melvold, K., Jain, S.K. 2015. Integra
 
 Li, H., Xu, C.-Y., Beldring, S. 2015. How much can we gain with increasing model complexity with the same model concepts? Journal of Hydrology 527, 858-871. http://dx.doi.org/10.1016/j.jhydrol.2015.05.044
 
-Li, H., Xu, C.-Y., Beldring, S., Tallaksen, L.M., Jain, S.K. 2016. Water resources under climate change in Himalayan basins, Water Resources Management 30, 843–859. doi:10.1007/s11269-015-1194-5
+Li, H., Xu, C.-Y., Beldring, S., Tallaksen, L.M., Jain, S.K. 2016. Water resources under climate change in Himalayan basins, Water Resources Management 30, 843–859. http://dx.doi.org/10.1007/s11269-015-1194-5
 
 Huang, S., Eisner, S., Magnusson, J., Lussana, C., Yang, X., Beldring, S. 2019. Improvements of the spatially distributed hydrological modelling using the HBV model at 1 km resolution for Norway. Journal of Hydrology 557:123585, https://doi.org/10.1016/j.jhydrol.2019.03.051
 
