@@ -10,6 +10,10 @@ Beldring, S. 2002. Multi-criteria validation of a precipitation-runoff model. Jo
 
 Beldring, S., Engeland, K., Roald, L.A., Sælthun, N.R., Voksø, A. 2003. Estimation of parameters in a distributed precipitation-runoff model for Norway. Hydrology and Earth System Sciences 7, 304-316. https://doi.org/10.5194/hess-7-304-2003
 
+Wong, W.K., Beldring, S., Engen-Skaugen, T., Haddeland, I., Hisdal, H. 2011. Climate change effects on spatiotemporal patterns of hydroclimatological summer droughts in Norway. Journal of Hydrometeorology 12, 1205-1220, http://dx.doi.org/10.1175/2011JHM1357.1
+
+Beldring, S., Engen-Skaugen, T., Førland, E.J., Roald, L.A. 2008. Climate change impacts on hydrological processes in Norway based on two methods for transferring regional climate model results to meteorological station sites. Tellus 60A, 439–450, https://onlinelibrary.wiley.com/doi/10.1111/j.1600-0870.2008.00306.x 
+
 Li, H., Beldring, S., Xu, C.-Y. 2014. Implementation and testing of routing algorithms in the distributed Hydrologiska Byråns Vattenbalansavdelning model for mountainous catchments. Hydrology Research, 45.3, 322-332. https://doi.org/10.2166/nh.2013.009
 
 Li, H., Beldring, S., Xu, C.-Y., Huss, M., Melvold, K., Jain, S.K. 2015. Integrating a glacier retreat model into a hydrological model – Case studies of three glacierised catchments in Norway and Himalayan region, Journal of Hydrology 527, 656-667. http://dx.doi.org/10.1016/j.jhydrol.2015.05.017
