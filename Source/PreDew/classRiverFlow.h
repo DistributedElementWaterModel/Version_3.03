@@ -4,6 +4,7 @@
  *  Program for calculating water balance for distributed hydrological response units,  *
  *  and traversing and accumulating runoff from a hierarchy of river networks,          *
  *  lakes and landscape elements.                                                       *
+ *  Preprocessing for traversing and defining a hierarchy of watercourse elements.      *
  *                                                                                      *
  *  Author: Stein Beldring, Norway                                                      *
  *                                                                                      *
