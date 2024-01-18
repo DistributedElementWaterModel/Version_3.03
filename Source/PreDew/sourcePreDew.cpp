@@ -47,7 +47,7 @@ int main(int argc, char *argv[])
   int preSetModelStructure = -1;
   int lakeNumber;
   double value;
-  double correction;
+  double correction, maxBas;
   double xllCorner, yllCorner, cellSize;
 
   if (argc != 2) {
@@ -168,7 +168,7 @@ int main(int argc, char *argv[])
   cout << "\n # Number of sub-catchments " << numWatc << endl;
   SubCatchment *CatchmentElement = new SubCatchment [numWatc];
   for (i=0; i<numWatc; i++) {
-    fileWCo >> j >> ch >> subCatchmentId >> lakeNumber >> correction;
+    fileWCo >> j >> ch >> subCatchmentId >> lakeNumber >> maxBas >> correction;
     if (j != i) {
       cout << endl << "Error reading file " << fileName << "\t" << i << "\t" << j << endl;
       exit (1);
