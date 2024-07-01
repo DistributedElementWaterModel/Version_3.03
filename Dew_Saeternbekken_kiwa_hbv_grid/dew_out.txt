@@ -150,7 +150,9 @@ Number of sub-catchment elements selected for time series output: 3
 80003
 
 Precipitation and temperature correction for catchments: 
-0  80003  1  0
+0  80001  1  0
+1  80002  1  0
+2  80003  1  0
 
     Sub-catchment :  80001
 

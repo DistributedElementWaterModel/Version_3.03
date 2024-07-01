@@ -1,5 +1,3 @@
-# Number of landscape elements selected for HBV time series output: 3
+# Number of landscape elements selected for HBV time series output: 0
 *no.*  *groundwater reference*  *effective prorosity*
- 10             -1.5                  0.15
- 11             -1.5                  0.15
- 14             -1.5                  0.15
+ 

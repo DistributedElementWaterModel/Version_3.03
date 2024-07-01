@@ -135,13 +135,13 @@ KiWa subsurface parameters:
 
 Glacier retreat parameters: 
 -0.02    0.12    0    6    -0.02    0.12    0    6    
-Number of landscape elements selected for HBV time series output: 3
-10  -1.5  0.15
-11  -1.5  0.15
-14  -1.5  0.15
+Number of landscape elements selected for HBV time series output: 0
 
 
-Number of landscape elements selected for KiWa time series output: 0
+Number of landscape elements selected for KiWa time series output: 3
+0  0.5  1
+10  0.5  1
+20  0.5  1
 
 Number of sub-catchment elements selected for time series output: 3
 80001
@@ -149,7 +149,9 @@ Number of sub-catchment elements selected for time series output: 3
 80003
 
 Precipitation and temperature correction for catchments: 
-0  80003  1  0
+0  80001  1  0
+1  80002  1  0
+2  80003  1  0
 
     Sub-catchment :  80001
 
