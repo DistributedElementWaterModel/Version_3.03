@@ -1,0 +1,10 @@
+# Number of sub-catchment elements selected for time series output:  9
+0 : 02476808  -9999  1.0  1.0  2.145 Losna
+1 : 01676814  -9999  1.0  1.0  2.165 Bygdin
+2 : 01796840  -9999  1.0  1.0  2.13  Nedre Sjodalsvatn
+3 : 01546868  -9999  1.0  1.0  2.268 Akslen
+4 : 01266897  -9999  1.0  1.0  2.291 Tora
+5 : 01986867  -9999  1.0  1.0  2.25  Lalm
+6 : 01866876  -9999  1.0  1.0  2.284 Saelatunga
+7 : 01926898  -9999  1.0  1.0  2.303 Dombaas
+8 : 02056871  -9999  1.0  1.0  2.614 Rosten
