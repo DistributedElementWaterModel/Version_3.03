@@ -141,7 +141,8 @@ void TraverseRouteWaterCourse(SubCatchment * const thisSubCatchment, int timeSte
     }
 
     // Routing for river elements
-    if (thisSubCatchment->GetManning() > 0.0)
+    if (thisSubCatchment->GetLakeNumber() < 0)
+    //    if (thisSubCatchment->GetManning() > 0.0)
     {
         // Routing distance
         if (thisSubCatchment->GetLandScapeElement()->GetFlowDirection() == 1 || thisSubCatchment->GetLandScapeElement()->GetFlowDirection() == 4 || thisSubCatchment->GetLandScapeElement()->GetFlowDirection() == 16 || thisSubCatchment->GetLandScapeElement()->GetFlowDirection() == 64)
@@ -174,6 +175,11 @@ void TraverseRouteWaterCourse(SubCatchment * const thisSubCatchment, int timeSte
         {
             routeOutput2 = 0.0;
         }
+    }
+    // Lake element with routing
+    else if (thisSubCatchment->GetLakeOutlet() > 0)
+    {
+        routeOutput2 = routeInput2;
     }
     // Lake element, water is routed directly to outlet without change in storage
     else

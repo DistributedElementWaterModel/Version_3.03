@@ -80,6 +80,7 @@ void WaterBalanceElements(DistributedElement * const Dew, ParametersGeneral * Pa
                       bool * inputDataFound, bool * firstTotal);
 void SetElementCorrection(DistributedElement * const Dew, int numLand, int numberCorrectionCatchments, int * correctionCatchments, 
 			  double * correctionPrecipitation, double * correctionTemperature, ofstream &fout);
+void TraverseOutletRoutingSubCatchment(SubCatchment * const thisSubCatchment, int numWatc, int * outletRoutingSubCatchments);
 void TraverseCorrectionSubCatchment(SubCatchment * const thisSubCatchment, int numberCorrectionCatchments,
                                     int * correctionCatchments, double * correctionPrecipitation,
                                     double * correctionTemperature);
@@ -974,6 +975,8 @@ int main(int argc, char *argv[])
     fileWCo >> numWatc;
     cout << "\n # Number of sub-catchments " << numWatc << endl;
     SubCatchment *CatchmentElement = new SubCatchment[numWatc];
+    // Outlet lake routing sub-catchment
+    int * outletRoutingSubCatchments = new int[numWatc];
     for (i = 0; i < numWatc; i++)
     {
         fileWCo >> j >> ch >> subCatchmentId >> lakeNumber >> maxBas >> correction;
@@ -996,6 +999,7 @@ int main(int argc, char *argv[])
         CatchmentElement[i].ObsDataInput(fileObsStreamflow, startSimulationTime, endSimulationTime, numberTimeSteps,
                                          ParGeneralStore->GetSECONDS_TIMESTEP());
         CatchmentElement[i].SetSelectedSubCatchmentTimeSeriesElements(SelectedSubCatchmentTimeSeriesElementsStore);
+	outletRoutingSubCatchments[i] = lakeNumber;
         cout << " Sub-catchment index " << i << "  " << "Sub-catchment identifier " << CatchmentElement[i].GetIdentifier() << "  " << "Sub-catchment correction " << CatchmentElement[i].GetCorrection() << endl;
     }
     // Watercourse outlets
@@ -1042,6 +1046,12 @@ int main(int argc, char *argv[])
     }
     fileWCo.close();
     // End read file with sub-catchment information
+
+     // Find lake outlets 
+    for (i = 0; i < numWatcOut; i++)
+    {
+        TraverseOutletRoutingSubCatchment(Outlet[i], numWatc, outletRoutingSubCatchments);
+    }
 
     // Read information about sub-catchment elements and landscape elements
     ReadSubCatchmentIdentifier(Dew, CatchmentElement, numWatc, flowHierarchy, fileControl, fout);
@@ -1098,6 +1108,7 @@ int main(int argc, char *argv[])
         TraverseCorrectionSubCatchment(Outlet[i], numberCorrectionCatchments, correctionCatchments, correctionPrecipitation, correctionTemperature);
     }
     finCorrection.close();
+    delete[] outletRoutingSubCatchments;
     delete[] correctionCatchments;
     delete[] correctionPrecipitation;
     delete[] correctionTemperature;
@@ -1377,6 +1388,7 @@ int main(int argc, char *argv[])
         }
         finManning.getline(buffer, 1024);
         i = 0;
+	cout << endl << " # Manning roughness coefficients " << endl << endl;
         while (finManning.getline(buffer, 1024))
         {
             //    cout << buffer << endl;
@@ -2323,6 +2335,32 @@ void SetElementCorrection(DistributedElement * const Dew, int numLand, int numbe
     Dew[k].SetPrecipitationCorrection(precCorr);
     Dew[k].SetTemperatureCorrection(tempCorr);
   }
+}
+
+
+void TraverseOutletRoutingSubCatchment(SubCatchment * const thisSubCatchment, int numWatc, int * outletRoutingSubCatchments)
+{
+    bool outletRoutingFound=false;
+    int i, j;
+
+    for (i = 0; i < thisSubCatchment->GetNumUpStream(); i++)
+    {
+        outletRoutingFound=false;
+        for (j = 0; j < numWatc; j++)
+        {
+	    if (!outletRoutingFound && outletRoutingSubCatchments[j] == thisSubCatchment->GetLakeNumber())
+	    {
+ 	        outletRoutingFound=true;
+		thisSubCatchment->SetLakeOutlet(thisSubCatchment->GetLakeNumber());
+	    }
+	    else
+	    {
+		outletRoutingSubCatchments[j] = -9999;
+	    }
+	}
+	TraverseOutletRoutingSubCatchment(thisSubCatchment->GetUpStream(i), numWatc, outletRoutingSubCatchments);
+    }
+ 
 }
 
 

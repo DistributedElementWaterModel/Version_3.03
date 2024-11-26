@@ -5,6 +5,7 @@
 
 SubCatchment::SubCatchment() :
     lakeNumber(-9999),
+    lakeOutlet(-9999),
     numUpStream(0),
     numLandScape(0),
     maxBas(1.0),
@@ -73,6 +74,14 @@ void  SubCatchment::SetLakeNumber(int value)
 int  SubCatchment::GetLakeNumber() const
 {
     return lakeNumber;
+}
+void  SubCatchment::SetLakeOutlet(int value)
+{
+    lakeOutlet = value;
+}
+int  SubCatchment::GetLakeOutlet() const
+{
+    return lakeOutlet;
 }
 void  SubCatchment::SetSelectedSubCatchmentTimeSeriesElements(SelectedSubCatchmentTimeSeriesElements *object)
 {

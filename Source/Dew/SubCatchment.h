@@ -23,6 +23,8 @@ public:
     DistributedElement *GetLandScapeElement() const;
     void SetLakeNumber(int value);
     int GetLakeNumber() const;
+    void SetLakeOutlet(int value);
+    int GetLakeOutlet() const;
     void SetSelectedSubCatchmentTimeSeriesElements(SelectedSubCatchmentTimeSeriesElements *object);
     SelectedSubCatchmentTimeSeriesElements *GetSelectedSubCatchmentTimeSeriesElements() const;
     void SetMaxBas(double value);
@@ -168,6 +170,7 @@ private:
     int subCatchmentIndex;
     int identifier;
     int lakeNumber;
+    int lakeOutlet;
     int numUpStream;
     int numLandScape;
     double maxBas;
