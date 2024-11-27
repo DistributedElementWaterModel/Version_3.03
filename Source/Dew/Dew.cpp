@@ -2315,29 +2315,6 @@ void GetRowCol(int elementNo, int nCols, int &row, int &col)
 }
 
 
-void SetElementCorrection(DistributedElement * const Dew, int numLand, int numberCorrectionCatchments, int * correctionCatchments, 
-			  double * correctionPrecipitation, double * correctionTemperature, ofstream &fout)
-{
-
-  int i, k;
-  double precCorr, tempCorr;
-
-  if (numberCorrectionCatchments > 0) {
-    precCorr = correctionPrecipitation[0];
-    tempCorr = correctionTemperature[0];
-  }
-  else {
-    precCorr = 1.0;
-    tempCorr = 0.0;
-  }
-
-  for (k=0; k<numLand; k++) {
-    Dew[k].SetPrecipitationCorrection(precCorr);
-    Dew[k].SetTemperatureCorrection(tempCorr);
-  }
-}
-
-
 void TraverseOutletRoutingSubCatchment(SubCatchment * const thisSubCatchment, int numWatc, int * outletRoutingSubCatchments)
 {
     bool outletRoutingFound=false;
@@ -2360,7 +2337,29 @@ void TraverseOutletRoutingSubCatchment(SubCatchment * const thisSubCatchment, in
 	}
 	TraverseOutletRoutingSubCatchment(thisSubCatchment->GetUpStream(i), numWatc, outletRoutingSubCatchments);
     }
- 
+}
+
+
+void SetElementCorrection(DistributedElement * const Dew, int numLand, int numberCorrectionCatchments, int * correctionCatchments, 
+			  double * correctionPrecipitation, double * correctionTemperature, ofstream &fout)
+{
+
+  int i, k;
+  double precCorr, tempCorr;
+
+  if (numberCorrectionCatchments > 0) {
+    precCorr = correctionPrecipitation[0];
+    tempCorr = correctionTemperature[0];
+  }
+  else {
+    precCorr = 1.0;
+    tempCorr = 0.0;
+  }
+
+  for (k=0; k<numLand; k++) {
+    Dew[k].SetPrecipitationCorrection(precCorr);
+    Dew[k].SetTemperatureCorrection(tempCorr);
+  }
 }
 
 
