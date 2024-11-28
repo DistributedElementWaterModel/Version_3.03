@@ -1,0 +1,6 @@
+Output file name                                        : flow_out.txt
+File with geographical analysis area                    : losna_area_all.asc
+File with watershed outlets                             : outlet.txt
+File with watercourse hierarchy elements identification : losna_waterid.asc
+File with lake element numbers                          : losna_LakeNo.asc
+File with flow direction grid for landscape elements    : losnaflowd.asc

@@ -53,7 +53,7 @@ void TraverseLandScapeTravelTime(DistributedElement * const thisElement, double 
     {
         spaceDist = sqrt(thisElement->GetArea()) * sqrt(2.0);
     }
-    velocity = waterVelocity[0] * 60.0;           // m/s -> m/minute
+    velocity = waterVelocity[0];           // m/s
     if (thisElement->GetTravelTime() < 0)
     {
         travelTime = travelTime + spaceDist / (velocity * sqrt(tan(thisElement->GetSlopeAngle() * acos(-1.0) / 180.0)));

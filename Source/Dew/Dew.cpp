@@ -1150,6 +1150,7 @@ int main(int argc, char *argv[])
         }
         finVelocity.getline(buffer, 1024);
         i = 0;
+	cout << endl << " # Water velocities for landscape elements " << endl << endl;
         while (finVelocity.getline(buffer, 1024))
         {
             //    cout << buffer << endl;
