@@ -176,15 +176,18 @@ void TraverseRouteWaterCourse(SubCatchment * const thisSubCatchment, int timeSte
             routeOutput2 = 0.0;
         }
     }
-    // Lake element with routing
-    else if (thisSubCatchment->GetLakeOutlet() > 0)
-    {
+    else 
+    { 
+      // Lake element with routing
+      if (thisSubCatchment->GetLakeOutlet() > 0)
+      {
         routeOutput2 = routeInput2;
-    }
-    // Lake element, water is routed directly to outlet without change in storage
-    else
-    {
+      }
+      // Lake element without routing, water is routed directly to outlet without change in storage
+      else
+      {
         routeOutput2 = routeInput2;
+      }
     }
 
     if (routeOutput2 < 0.0)

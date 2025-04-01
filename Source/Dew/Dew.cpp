@@ -2326,15 +2326,15 @@ void TraverseOutletRoutingSubCatchment(SubCatchment * const thisSubCatchment, in
         outletRoutingFound=false;
         for (j = 0; j < numWatc; j++)
         {
-	    if (!outletRoutingFound && outletRoutingSubCatchments[j] == thisSubCatchment->GetLakeNumber())
+	    if (!outletRoutingFound && thisSubCatchment->GetLakeNumber() > 0 && outletRoutingSubCatchments[j] == thisSubCatchment->GetLakeNumber())
 	    {
  	        outletRoutingFound=true;
 		thisSubCatchment->SetLakeOutlet(thisSubCatchment->GetLakeNumber());
 	    }
-	    else
-	    {
-		outletRoutingSubCatchments[j] = -9999;
-	    }
+	    //	    else
+	    //	    {
+	    //		outletRoutingSubCatchments[j] = -9999;
+	    //	    }
 	}
 	TraverseOutletRoutingSubCatchment(thisSubCatchment->GetUpStream(i), numWatc, outletRoutingSubCatchments);
     }

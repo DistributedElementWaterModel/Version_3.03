@@ -145,28 +145,28 @@ Precipitation and temperature correction for catchments:
 
     Sub-catchment :  1220009
 
-    Nash-Sutcliffe efficiency                           0.89
-    Root mean square error                              38.59
-    Bias (volume error)                                 0.03
-    Volume error correction factor                      0.97
-    Pearson's product-moment correlation coefficient    0.89
+    Nash-Sutcliffe efficiency                           0.84
+    Root mean square error                              45.86
+    Bias (volume error)                                 -0.18
+    Volume error correction factor                      1.22
+    Pearson's product-moment correlation coefficient    0.86
 
 
     Sub-catchment :  1220011
 
-    Nash-Sutcliffe efficiency                           0.86
-    Root mean square error                              9.95
-    Bias (volume error)                                 0.04
-    Volume error correction factor                      0.96
-    Pearson's product-moment correlation coefficient    0.89
+    Nash-Sutcliffe efficiency                           0.83
+    Root mean square error                              11.02
+    Bias (volume error)                                 -0.17
+    Volume error correction factor                      1.21
+    Pearson's product-moment correlation coefficient    0.85
 
 
     Watercourse outlet :  1220009
 
-    Nash-Sutcliffe efficiency                           0.89
-    Root mean square error                              38.59
-    Bias (volume error)                                 0.03
-    Volume error correction factor                      0.97
-    Pearson's product-moment correlation coefficient    0.89
+    Nash-Sutcliffe efficiency                           0.84
+    Root mean square error                              45.86
+    Bias (volume error)                                 -0.18
+    Volume error correction factor                      1.22
+    Pearson's product-moment correlation coefficient    0.86
 
 
