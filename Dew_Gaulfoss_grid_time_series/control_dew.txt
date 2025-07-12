@@ -27,3 +27,4 @@ File with input data                                                            
 File with water velocities for Source-To-Sink routing                              :
 File with Manning roughness coefficients for Muskingum-Cunge routing               :
 File with routing parameters for Muskingum-Cunge routing                           :
+File with lake outlet routing parameters                                           : 
