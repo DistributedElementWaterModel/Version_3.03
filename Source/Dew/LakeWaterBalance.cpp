@@ -161,9 +161,9 @@ void LakeWaterBalance::WaterBalance(int timeStep, DateTime datetime, double upLa
     }
 
     /*  Lake water level minimum  */
-    if (waterLevel < (-1)*deltaLevel) {
-      lakeEvaporation = 0.0;
-      //      waterLevel = (-1)*deltaLevel;
+    if (GetLandScapeElement()->GetLakeNumber() < 0)
+    {
+      if (waterLevel < (-1)*deltaLevel) lakeEvaporation = 0.0;
     }
 
     /*  Initial lake water level  */

@@ -37,6 +37,16 @@ public:
     double GetRiverSlope() const;
     void SetWidth(double value);
     double GetWidth() const;
+    void SetLakeOutletWaterLevel(double value);
+    void SetLakeOutletArea(double value);
+    void SetLakeOutflowCoefficient(double value);
+    void SetLakeOutflowDeltaLevel(double value);
+    void SetLakeOutflowExponent(double value);
+    double GetLakeOutletWaterLevel() const;
+    double GetLakeOutletArea() const;
+    double GetLakeOutflowCoefficient() const;
+    double GetLakeOutflowDeltaLevel() const;
+    double GetLakeOutflowExponent() const;
     void SetAccumulatedRouteInput(double value);;
     double GetAccumulatedRouteInput() const;
     void AllocateAccumulatedDischarge(int numberTimeSteps);
@@ -178,6 +188,11 @@ private:
     double manning;
     double riverSlope;
     double width;
+    double lakeOutletWaterLevel;
+    double lakeOutletArea;
+    double lakeOutflowCoefficient;
+    double lakeOutflowDeltaLevel;
+    double lakeOutflowExponent;
     double accumulatedRouteInput;
     double *accumulatedDischarge;
     double *accumulatedUpperDischarge;

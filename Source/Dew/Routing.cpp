@@ -118,6 +118,7 @@ void TraverseRouteWaterCourse(SubCatchment * const thisSubCatchment, int timeSte
     double accumulatedRouteInput = 0.0;
     double routeInput1, routeInput2, routeOutput1, routeOutput2;
     double qRef, yRef, cRef, spaceDist, courantNumber, epsilon;
+    double waterLevel, waterInput, waterOutput;
     DistributedElement * thisElement;
 
     for (i = 0; i < thisSubCatchment->GetNumUpStream(); i++)
@@ -181,9 +182,15 @@ void TraverseRouteWaterCourse(SubCatchment * const thisSubCatchment, int timeSte
       // Lake element with routing
       if (thisSubCatchment->GetLakeOutlet() > 0)
       {
-        routeOutput2 = routeInput2;
+	waterInput = routeInput2 * secondsPerTimeStep / thisSubCatchment->GetLakeOutletArea();
+	waterLevel = thisSubCatchment->GetLakeOutletWaterLevel() + waterInput;
+	waterOutput = thisSubCatchment->GetLakeOutflowCoefficient() * pow((waterLevel + thisSubCatchment->GetLakeOutflowDeltaLevel()), thisSubCatchment->GetLakeOutflowExponent());
+	waterLevel= waterLevel - waterOutput;
+	thisSubCatchment->SetLakeOutletWaterLevel(waterLevel);
+	routeOutput2 = (waterOutput * thisSubCatchment->GetLakeOutletArea()) / secondsPerTimeStep;
+	//        routeOutput2 = routeInput2;
       }
-      // Lake element without routing, water is routed directly to outlet without change in storage
+      // Lake element without routing, water is routed directly to outlet lake element
       else
       {
         routeOutput2 = routeInput2;

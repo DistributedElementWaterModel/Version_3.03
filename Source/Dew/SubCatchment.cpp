@@ -12,7 +12,13 @@ SubCatchment::SubCatchment() :
     correction(0.0),
     manning(-9999.0),
     riverSlope(0.0),
-    width(0.0)
+    width(0.0),
+    lakeOutletWaterLevel(0.0),
+    lakeOutletArea(1.0E6),
+    lakeOutflowCoefficient(1.0),
+    lakeOutflowDeltaLevel(0.0),
+    lakeOutflowExponent(1.0)
+
 {
     UpStream = 0;
     SetLandScapeElement(0);
@@ -126,6 +132,46 @@ void  SubCatchment::SetWidth(double value)
 double  SubCatchment::GetWidth() const
 {
     return width;
+}
+void  SubCatchment::SetLakeOutletWaterLevel(double value)
+{
+    lakeOutletWaterLevel = value;
+}
+double  SubCatchment::GetLakeOutletWaterLevel() const
+{
+    return lakeOutletWaterLevel;
+}
+void  SubCatchment::SetLakeOutletArea(double value)
+{
+    lakeOutletArea = value;
+}
+double  SubCatchment::GetLakeOutletArea() const
+{
+    return lakeOutletArea;
+}
+void  SubCatchment::SetLakeOutflowCoefficient(double value)
+{
+    lakeOutflowCoefficient = value;
+}
+double  SubCatchment::GetLakeOutflowCoefficient() const
+{
+    return lakeOutflowCoefficient;
+}
+void  SubCatchment::SetLakeOutflowDeltaLevel(double value)
+{
+    lakeOutflowDeltaLevel = value;
+}
+double  SubCatchment::GetLakeOutflowDeltaLevel() const
+{
+    return lakeOutflowDeltaLevel;
+}
+void  SubCatchment::SetLakeOutflowExponent(double value)
+{
+    lakeOutflowExponent = value;
+}
+double  SubCatchment::GetLakeOutflowExponent() const
+{
+    return lakeOutflowExponent;
 }
 void  SubCatchment::SetAccumulatedRouteInput(double value)
 {

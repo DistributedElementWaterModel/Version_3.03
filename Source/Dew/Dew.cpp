@@ -144,6 +144,7 @@ int main(int argc, char *argv[])
     char fileNameInput[100];
     char fileNameSubCatchment[100];
     char fileNameRouting[100];
+    char fileNameLakeOutlet[100];
     char buffer[1024];
     char manningVegetationType[100];
     char modelRun = 'M';
@@ -171,7 +172,7 @@ int main(int argc, char *argv[])
     //  int time, startModelTime, startSimulationTime, endSimulationTime;
     int numberCorrectionCatchments;
     int seriesNumber;
-    int lakeNumber;
+    int lakeNumber, lakeOutletNumber, numberOutletlakes;
     int velocityIndex, numWatcRoute, currentCat, manningIndex;
     double seriesWeight;
     double sumWeight;
@@ -181,6 +182,7 @@ int main(int argc, char *argv[])
     double travelTime, riverSlope, width;
     double xllCorner, yllCorner, cellSize;
     double elementArea, elementElevation, elementSlopeLength, elementSlopeAngle, elementAspect, lakePercent, glacierPercent, glacSurfElev, glacIceThick;
+    double lakeArea, initialWaterLevel, lakeCoefficient, lakeDeltaLevel, lakeExponent;
     double areaFraction[maximumNumberLandClasses];
     double manningRoughness[maximumNumberManningClasses];
     DateTime datetime;
@@ -1404,26 +1406,29 @@ int main(int argc, char *argv[])
         }
         finManning.close();
 
-        // Read routing parameters of river and lake elements
-        /*    cout << " File with routing parameters: ";
+        // Read routing parameters of river elements
+        /*    cout << " File with river routing parameters: ";
         cin >> fileNameRouting;
         cout << endl;*/
         fileControl.ignore(100, ':');
         fileControl >> fileNameRouting;
         fileControl.ignore(1024, '\n');
-        ifstream fileRout(fileNameRouting);
-        if (!fileRout.is_open())
+        ifstream fileRoute(fileNameRouting);
+        if (!fileRoute.is_open())
         {
             cout << endl << "Error opening file " << fileNameRouting << endl << endl;
             exit(1);
         }
         // Sub-catchment elements with routing parameters
-        fileRout.ignore(100, ':');
-        fileRout >> numWatcRoute;
+        fileRoute.ignore(100, ':');
+        fileRoute >> numWatcRoute;
         cout << "\n # Number of sub-catchments " << numWatcRoute << endl;
+	fileRoute.ignore(1024, '\n');
+	fileRoute.ignore(1024, '\n');
         for (i = 0; i < numWatcRoute; i++)
         {
-            fileRout >> j >> ch >> subCatchmentId >> manningIndex >> riverSlope >> width;
+            fileRoute >> j >> subCatchmentId >> manningIndex >> riverSlope >> width;
+	    //	    cout << i << " " << j << " " << subCatchmentId << " " << manningIndex << " " << riverSlope << " " << width << endl;
             if (j != i)
             {
                 cout << endl << "Error reading file " << fileNameRouting << "\t" << i << "\t" << j << endl;
@@ -1453,12 +1458,66 @@ int main(int argc, char *argv[])
                 exit(1);
             }
 
-            fileRout.ignore(1024, '\n');
+            fileRoute.ignore(1024, '\n');
             CatchmentElement[currentCat].SetManning(manningRoughness[manningIndex]);
             CatchmentElement[currentCat].SetRiverSlope(riverSlope);
             CatchmentElement[currentCat].SetWidth(width);
         }
-        fileRout.close();
+        fileRoute.close();
+
+        // Read routing parameters of lake elements
+        /*    cout << " File with lake routing parameters: ";
+        cin >> fileNameLakeOutlet;
+        cout << endl;*/
+        fileControl.ignore(100, ':');
+        fileControl >> fileNameLakeOutlet;
+        fileControl.ignore(1024, '\n');
+        ifstream fileLakeOutlet(fileNameLakeOutlet);
+        if (!fileLakeOutlet.is_open())
+        {
+            cout << endl << "Error opening file " << fileNameLakeOutlet << endl << endl;
+            exit(1);
+        }
+        // Sub-catchment elements with lake routing parameters
+        fileLakeOutlet.ignore(100, ':');
+        fileLakeOutlet >> numberOutletlakes;
+        cout << "\n # Number of outlet lakes " << numberOutletlakes << endl;
+	fileLakeOutlet.ignore(1024, '\n');
+	fileLakeOutlet.ignore(1024, '\n');
+	//      fileLakeOutlet.getline(buffer, 1024);
+        for (i = 0; i < numberOutletlakes; i++)
+        {
+	  fileLakeOutlet >> j >> lakeOutletNumber >> lakeArea >> initialWaterLevel >> lakeCoefficient >> lakeDeltaLevel >> lakeExponent;
+	  cout << i << " " << j << " " << lakeOutletNumber << " " << lakeArea << " " << initialWaterLevel << " " << lakeCoefficient << " " << lakeDeltaLevel << " " << lakeExponent << endl;
+	  /*            if (j != i)
+            {
+                cout << endl << "Error reading file " << fileNameLakeOutlet << "\t" << i << "\t" << j << endl;
+                exit(1);
+		}*/
+
+            // Find the sub-catchment identification of lake outlet
+            for (j = 0; j < numWatc; j++)
+            {
+                if (lakeOutletNumber == CatchmentElement[j].GetLakeNumber())
+                {
+                    currentCat = j;
+                    break;
+                }
+            }
+	    /*            if (j == numWatc)
+            {
+                cout << endl << "Error reading file " << fileNameLakeOutlet << "\t Lake outlet " << subCatchmentId << "  not found in CatchmentElement " << endl;
+                exit(1);
+		}*/
+
+            fileLakeOutlet.ignore(1024, '\n');
+            CatchmentElement[currentCat].SetLakeOutletArea(lakeArea);
+            CatchmentElement[currentCat].SetLakeOutletWaterLevel(initialWaterLevel);
+            CatchmentElement[currentCat].SetLakeOutflowCoefficient(lakeCoefficient);
+            CatchmentElement[currentCat].SetLakeOutflowDeltaLevel(lakeDeltaLevel);
+            CatchmentElement[currentCat].SetLakeOutflowExponent(lakeExponent);
+        }
+        fileLakeOutlet.close();
 
         // Routing of water through network of river and lake elements
         timeStep = 0;
@@ -1491,6 +1550,9 @@ int main(int argc, char *argv[])
     }
     else
     {
+        fileControl.getline(buffer, 1024);
+        //    fileControl.ignore(1024,'\n');
+        //    cout << "\n " << buffer << endl;
         fileControl.getline(buffer, 1024);
         //    fileControl.ignore(1024,'\n');
         //    cout << "\n " << buffer << endl;
