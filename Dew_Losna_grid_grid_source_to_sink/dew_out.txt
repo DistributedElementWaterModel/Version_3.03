@@ -196,7 +196,7 @@ Precipitation and temperature correction for catchments:
     Sub-catchment :  1986867
 
     Nash-Sutcliffe efficiency                           0.80
-    Root mean square error                              51.39
+    Root mean square error                              51.44
     Bias (volume error)                                 -0.19
     Volume error correction factor                      1.24
     Pearson's product-moment correlation coefficient    0.84
@@ -213,17 +213,17 @@ Precipitation and temperature correction for catchments:
 
     Sub-catchment :  1676814
 
-    Nash-Sutcliffe efficiency                           0.57
-    Root mean square error                              6.55
+    Nash-Sutcliffe efficiency                           0.56
+    Root mean square error                              6.61
     Bias (volume error)                                 -0.39
-    Volume error correction factor                      1.63
-    Pearson's product-moment correlation coefficient    0.76
+    Volume error correction factor                      1.64
+    Pearson's product-moment correlation coefficient    0.75
 
 
     Sub-catchment :  2476808
 
     Nash-Sutcliffe efficiency                           0.72
-    Root mean square error                              120.53
+    Root mean square error                              120.56
     Bias (volume error)                                 -0.22
     Volume error correction factor                      1.28
     Pearson's product-moment correlation coefficient    0.79
@@ -232,7 +232,7 @@ Precipitation and temperature correction for catchments:
     Watercourse outlet :  2476808
 
     Nash-Sutcliffe efficiency                           0.72
-    Root mean square error                              120.53
+    Root mean square error                              120.56
     Bias (volume error)                                 -0.22
     Volume error correction factor                      1.28
     Pearson's product-moment correlation coefficient    0.79

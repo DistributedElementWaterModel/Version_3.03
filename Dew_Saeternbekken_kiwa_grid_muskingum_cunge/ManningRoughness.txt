@@ -1,4 +1,4 @@
-Type                    No.     ManningRoughness
+Soil type               No.     ManningRoughness
 Corine24                0       .398947657
 Corine1+3               1       .398947657
 Corine2+7+23+25         2       .398947657

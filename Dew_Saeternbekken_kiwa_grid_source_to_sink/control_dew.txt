@@ -24,6 +24,7 @@ File with information about sub-catchment elements and landscape elements       
 File with landscape element hierarchy                                              : dew_landupflow.txt
 File with precipitation and temperature correction for catchments                  : catchment_correction.txt
 File with input data                                                               : input_data.txt
-File with water velocities for Source-To-Sink routing                              : NRFvelocity.txt
+File with water velocities for Source-To-Sink routing                              : WaterVelocity.txt
 File with Manning roughness coefficients for Muskingum-Cunge routing               :
 File with routing parameters for Muskingum-Cunge routing                           :
+File with lake outlet routing parameters                                           : 
