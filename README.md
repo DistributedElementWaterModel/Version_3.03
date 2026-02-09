@@ -1,6 +1,3 @@
-## DistributedElementWaterModel 3.03
-Spatially distributed hydrological model with general land surface characteristics 
-
 ## Source
 Spatially distributed hydrological model with temperature-based method for evapotranspiration
 
