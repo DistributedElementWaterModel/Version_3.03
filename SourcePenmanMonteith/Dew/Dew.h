@@ -8,7 +8,7 @@ enum LANDSURFACE { SURF0, SURF1, SURF2, SURF3, SURF4, SURF5, SURF6, SURF7, SURF8
 //enum SOIL { SOIL0, SOIL1, SOIL2, SOIL3, SOIL4, SOIL5, SOIL6, SOIL7, SOIL8, SOIL9, 
 //            SOIL10, SOIL11, SOIL12, SOIL13, SOIL14, SOIL15, SOIL16, SOIL17, SOIL18, SOIL19, 
 //            GLACIER_BED };
-enum SOIL { SOIL0, SOIL1, SOIL2, SOIL3, SOIL4, SOIL5, GLACIER_BED }; //NB! Navn i hbv_soil_parameters.dta må stemme overens med disse
+enum SOIL { SOIL0, SOIL1, SOIL2, SOIL3, SOIL4, SOIL5, GLACIER_BED }; //NB! Navn i hbv_soil_parameters.dta må stemme overens med disse 
 enum GLACIER_TYPE { VALLEY, PLATEAU };
 #define _USE_MATH_DEFINES   //pi
 #define ELEMENT(a,b) (((a)*nCols)+(b))
