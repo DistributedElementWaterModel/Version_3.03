@@ -449,6 +449,7 @@ int main(int argc, char *argv[])
         exit(1);
     }
 
+  if (inputFileFormat == 'N' || inputFileFormat == 'n') {
     fileControl.ignore(100, ':');
     fileControl >> forcingType;
     fileControl.ignore(256, '\n');
@@ -515,6 +516,7 @@ int main(int argc, char *argv[])
     fileControl.ignore(256,'\n');
     strcpy(biasName,fileName);
     printf(" biasname: %s\n",fileName);
+    }
 
     // Object for storing model control information
     ModelControl * ModelControlObject = new ModelControl;
