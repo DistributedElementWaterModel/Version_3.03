@@ -76,7 +76,7 @@ void SetTimeSeriesInput(DistributedElement * const Dew, ParametersGeneral * cons
                         int timeStep, bool * inputDataFound, bool * inputDataError);
 void WaterBalanceGrid(DistributedElement * const Dew, ParametersGeneral * ParGeneralStore,
                       InputElement * InputElementStore, int initialTimeSteps, int numberTimeSteps,
-                      int numLand, int timeStep, int nRows, int nCols, DateTime datetime, char * precPath,
+                      int numLand, int timeStep, int nRows, int nCols, DateTime datetime, char * metPath,
                       unsigned short int * precip10, unsigned short int * temp10K, unsigned short int * tmax10K, 
 		      unsigned short int * tmin10K, unsigned short int * wind10, unsigned short int * solar10, 
 	              unsigned short int * vp10, bool flowHierarchy,
@@ -1548,11 +1548,8 @@ int main(int argc, char *argv[])
         
 	      WaterBalanceGrid(Dew, ParGeneralStore, InputElementStore, initialTimeSteps, numberTimeSteps,
 			       numLand, timeStep, nRows, nCols,
-			       datetime, precPath, precip10, temp10K, tmax10K, tmin10K, wind10, solar10, vp10, 
+			       datetime, metPath, precip10, temp10K, tmax10K, tmin10K, wind10, solar10, vp10, 
 			       flowHierarchy, &inputDataFound, indexStore, numberIndexStore, fout, &firstTotal);
-	    /*            WaterBalanceGridVariable(Dew, ParGeneralStore, InputElementStore, initialTimeSteps, numberTimeSteps,
-                             numLand, timeStep, nRows, nCols,
-                             datetime, metPath, precip10, temp10K, flowHierarchy, &inputDataFound, &firstTotal);*/
 	    /*            WaterBalanceElements(Dew, ParGeneralStore, InputElementStore, initialTimeSteps, numberTimeSteps,
                              numLand, timeStep, nRows, nCols,
                              datetime, metMask, precip10, temp10K, flowHierarchy, &inputDataFound, &firstTotal);*/
@@ -2254,7 +2251,7 @@ void SetTimeSeriesInput(DistributedElement * const thisElement, ParametersGenera
 
 void WaterBalanceGrid(DistributedElement * const Dew, ParametersGeneral * ParGeneralStore,
                       InputElement * InputElementStore, int initialTimeSteps, int numberTimeSteps,
-                      int numLand, int timeStep, int nRows, int nCols, DateTime datetime, char * precPath,
+                      int numLand, int timeStep, int nRows, int nCols, DateTime datetime, char * metPath,
                       unsigned short int * precip10, unsigned short int * temp10K, unsigned short int * tmax10K, 
 		      unsigned short int * tmin10K, unsigned short int * wind10, unsigned short int * solar10, 
 	              unsigned short int * vp10, bool flowHierarchy,
@@ -2274,6 +2271,14 @@ void WaterBalanceGrid(DistributedElement * const Dew, ParametersGeneral * ParGen
     char VPFileName[100];
     char hydYear[5];
 
+    strcpy(precFileName,metPath);
+    strcpy(tempFileName,metPath);
+    strcpy(TmaxFileName, metPath);
+    strcpy(TminFileName, metPath);
+    strcpy(windFileName, metPath);
+    strcpy(solarFileName, metPath);
+    strcpy(VPFileName, metPath);
+    /*
     strcpy(precFileName,precPath); //same path for all variables when using .bil input files.
     strcpy(tempFileName,precPath);
     strcpy(TmaxFileName,precPath);
@@ -2281,7 +2286,7 @@ void WaterBalanceGrid(DistributedElement * const Dew, ParametersGeneral * ParGen
     strcpy(windFileName,precPath);
     strcpy(solarFileName,precPath);
     strcpy(VPFileName,precPath);
-	
+    */	
     strcat(precFileName,"/rr/");
     strcat(tempFileName,"/tm/");
     strcat(TmaxFileName, "/tmax/");
