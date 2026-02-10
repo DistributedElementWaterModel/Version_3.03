@@ -1815,7 +1815,7 @@ int main(int argc, char *argv[])
     }
  
     // Write water balance grid
-    WriteAsciiGridWaterBalance(Dew, startSimulationTime, endSimulationTime, numLand, nRows, nCols, noData, xllCorner, yllCorner, cellSize, fout);
+    //    WriteAsciiGridWaterBalance(Dew, startSimulationTime, endSimulationTime, numLand, nRows, nCols, noData, xllCorner, yllCorner, cellSize, fout);
  
     // Write discharge from all watercourse/sub-catchment elements in sub-catchment hierarchy to output files
     WriteSubCatchmentDischarge(CatchmentElement, numWatc, startSimulationTime, endSimulationTime, initialTimeSteps,
