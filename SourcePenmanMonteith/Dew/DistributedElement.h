@@ -33,10 +33,10 @@ public:
     double GetInputValue(int i) const;
     void SetArea(double value);
     double GetArea() const;
-    void SetLatitude(double value) { latitude = value; }
-    double GetLatitude() const { return latitude; }
-    void SetTimeFalling(double value) { timefalling = value; }
-    double GetTimeFalling() const { return timefalling; }
+    void SetLatitude(double value);
+    double GetLatitude() const;
+    void SetTimeFalling(double value);
+    double GetTimeFalling() const;
     void SetElevation(double value);
     double GetElevation() const;
     void SetSlopeLength(double value);

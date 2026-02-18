@@ -147,6 +147,22 @@ double DistributedElement::GetArea() const
 {
     return area;
 }
+void DistributedElement::SetLatitude(double value)
+{
+    latitude = value;
+}
+double DistributedElement::GetLatitude() const
+{
+    return latitude;
+}
+void DistributedElement::SetTimeFalling(double value)
+{
+    timefalling = value;
+}
+double DistributedElement::GetTimeFalling() const
+{
+    return timefalling;
+}
 void DistributedElement::SetElevation(double value)
 {
     elevation = value;

@@ -140,3 +140,147 @@ double  ParametersLandSurface::GetSNOW_WEIGHT(int k) const
 {
     return SNOW_WEIGHT[k];
 }
+void  ParametersLandSurface::SetTREE_HEIGHT(double value)
+{
+    TREE_HEIGHT = value;
+}
+double  ParametersLandSurface::GetTREE_HEIGHT() const
+{
+    return TREE_HEIGHT;
+}
+void  ParametersLandSurface::SetTREE_LAI(double value)
+{
+    TREE_LAI = value;
+}
+double  ParametersLandSurface::GetTREE_LAI() const
+{
+    return TREE_LAI;
+}
+void  ParametersLandSurface::SetTREE_LAI_CORR(double value)
+{
+    TREE_LAI_CORR = value;
+}
+double  ParametersLandSurface::GetTREE_LAI_CORR() const
+{
+    return TREE_LAI_CORR;
+}
+void  ParametersLandSurface::SetBULK_RESISTANCE(double value)
+{
+    BULK_RESISTANCE = value;
+}
+double  ParametersLandSurface::GetBULK_RESISTANCE() const
+{
+    return BULK_RESISTANCE;
+}
+void  ParametersLandSurface::SetALBEDO_SNOW(double value)
+{
+    ALBEDO_SNOW = value;
+}
+double  ParametersLandSurface::GetALBEDO_SNOW() const
+{
+    return ALBEDO_SNOW;
+}
+void  ParametersLandSurface::SetDECIDUOUS_SHARE(double value)
+{
+    DECIDUOUS_SHARE = value;
+}
+double  ParametersLandSurface::GetDECIDUOUS_SHARE() const
+{
+    return DECIDUOUS_SHARE;
+}
+void  ParametersLandSurface::SetWind_H(double value)
+{
+    WIND_H = value;
+}
+double  ParametersLandSurface::GetWind_H() const
+{
+    return WIND_H;
+}
+void  ParametersLandSurface::SetTopen_min(double value)
+{
+    Topen_min = value;
+}
+double  ParametersLandSurface::GetTopen_min() const
+{
+    return Topen_min;
+}
+void  ParametersLandSurface::SetTclose_min(double value)
+{
+    Tclose_min = value;
+}
+double  ParametersLandSurface::GetTclose_min() const
+{
+    return Tclose_min;
+}
+void  ParametersLandSurface::SetVPDclose(double value)
+{
+    VPDclose = value;
+}
+double  ParametersLandSurface::GetVPDclose() const
+{
+    return VPDclose;
+}
+void  ParametersLandSurface::SetVPDopen(double value)
+{
+    VPDopen = value;
+}
+double  ParametersLandSurface::GetVPDopen() const
+{
+    return VPDopen;
+}
+void  ParametersLandSurface::SetGH(double value)
+{
+    gh = value;
+}
+double  ParametersLandSurface::GetGH() const
+{
+    return gh;
+}
+void  ParametersLandSurface::SetCL(double value)
+{
+    cl = value;
+}
+double  ParametersLandSurface::GetCL() const
+{
+    return cl;
+}
+void  ParametersLandSurface::SetZ0G(double value)
+{
+    z0g = value;
+}
+double  ParametersLandSurface::GetZ0G() const
+{
+    return z0g;
+}
+void  ParametersLandSurface::SetGSMAX(double value)
+{
+    gsmax = value;
+}
+double  ParametersLandSurface::GetGSMAX() const
+{
+    return gsmax;
+}
+void  ParametersLandSurface::SetCR(double value)
+{
+    CR = value;
+}
+double  ParametersLandSurface::GetCR() const
+{
+    return CR;
+}
+void  ParametersLandSurface::SetD50(double value)
+{
+    D50 = value;
+}
+double  ParametersLandSurface::GetD50() const
+{
+    return D50;
+}
+void  ParametersLandSurface::SetQ50(double value)
+{
+    Q50 = value;
+}
+double  ParametersLandSurface::GetQ50() const
+{
+    return Q50;
+}

@@ -50,16 +50,16 @@ private:
     double throughFall;                      /*  Throughfall (m/timestep)  */
     double wetPeriod, dryPeriod;             /*  Length of wet and dry period during evapotranspiration (fraction of timestep)  */
     double leafAreaIndex;                    /*  Leaf area index  */
-    double tempMax;                          // maximum temperature (deg. C)
-    double tempMin;                          // minimum temperature (deg. C)
-    double wind1;                            // wind speed (m/s)
-    double radiationS;                      // solar radiation (MJ/m2/day)
-    double vp;                              // actual vapor pressure (Pa)
-    int    budburst;                          /* account the days after budburst*/
-    double sft;                              /*Growing Degree Day (GDD) sum*/
-    double calc_lai;                          /* calcualted LAI */
-    double g;                                /* heat unit index*/
-    double dm ;                              /* biomass */
-    double huharv ;                          /* head unit for harvest*/
-    double olai ;                            /* = calc_lai */
+    double tempMax;                          //  maximum temperature (deg. C)
+    double tempMin;                          //  minimum temperature (deg. C)
+    double wind1;                            //  wind speed (m/s)
+    double radiationS;                       //  solar radiation (MJ/m2/day)
+    double vp;                               //  actual vapor pressure (Pa)
+    int    budburst;                         /*  account the days after budburst*/
+    double sft;                              /*  Growing Degree Day (GDD) sum*/
+    double calc_lai;                         /*  calcualted LAI */
+    double g;                                /*  heat unit index*/
+    double dm ;                              /*  biomass */
+    double huharv ;                          /*  head unit for harvest*/
+    double olai ;                            /*  = calc_lai */
 };

@@ -264,3 +264,19 @@ int  ParametersGeneral::GetDAY_ANNUAL_GLACIER() const
 {
     return DAY_ANNUAL_GLACIER;
 }
+void  ParametersGeneral::SetHeight_WIND_INSTRUMENT(double value)
+{
+    Height_WIND_INSTRUMENT = value;
+}
+double  ParametersGeneral::GetHeight_WIND_INSTRUMENT() const
+{
+    return Height_WIND_INSTRUMENT;
+}
+void  ParametersGeneral::SetHeight_HUMI_INSTRUMENT(double value)
+{
+    Height_HUMI_INSTRUMENT = value;
+}
+double  ParametersGeneral::GetHeight_HUMI_INSTRUMENT() const
+{
+    return Height_HUMI_INSTRUMENT;
+}

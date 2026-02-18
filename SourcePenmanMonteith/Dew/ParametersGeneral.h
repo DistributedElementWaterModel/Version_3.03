@@ -60,10 +60,10 @@ public:
     int GetDAY_SNOW_ZERO() const;
     void SetDAY_ANNUAL_GLACIER(int value);
     int GetDAY_ANNUAL_GLACIER() const;
-    void SetHeight_WIND_INSTRUMENT(double  value) { Height_WIND_INSTRUMENT = value; }
-    double  GetHeight_WIND_INSTRUMENT() const { return Height_WIND_INSTRUMENT; }
-    void SetHeight_HUMI_INSTRUMENT(double  value) { Height_HUMI_INSTRUMENT = value; }
-    double  GetHeight_HUMI_INSTRUMENT() const { return Height_HUMI_INSTRUMENT; }
+    void SetHeight_WIND_INSTRUMENT(double value);
+    double GetHeight_WIND_INSTRUMENT() const;
+    void SetHeight_HUMI_INSTRUMENT(double value);
+    double GetHeight_HUMI_INSTRUMENT() const;
 
 private:
     int SECONDS_TIMESTEP;
