@@ -1,4 +1,4 @@
 Number of precipitation stations : 1
-Number of temperature stations   : 1
+Number of temperature stations   : 2
 P   -9999  -9999  -9999  -9999
 T   -9999  -9999  -9999  -9999
