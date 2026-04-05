@@ -1,0 +1,2 @@
+# Number of outlet lakes:  0
+ Lake outlet no   Lake area         Initial lake water level   Rating curve constant    Rating curve saddle point    Rating curve exponent
