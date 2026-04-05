@@ -1,3 +1,0 @@
-Type    no.  A            B            C           GAMMA
-VALLEY   0   -0.02        0.12         0.0         6.0
-PLATEAU  1   -0.02        0.12         0.0         6.0
