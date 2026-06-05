@@ -4662,12 +4662,12 @@ void WriteOutletWaterBalance(SubCatchment * const thisSubCatchment, DateTime sta
         printf("\n Filen %s ikke funnet!\n\n",fileName);
         exit(1);
 	}*/
-    /*    sprintf(fileName, "gim_%08d.out", thisSubCatchment->GetIdentifier());
+    sprintf(fileName, "gim_%08d.out", thisSubCatchment->GetIdentifier());
     if ((fpGim = fopen(fileName, "w")) == NULL)
     {
         printf("\n Filen %s ikke funnet!\n\n", fileName);
         exit(1);
-	}*/
+    }
     sprintf(fileName, "giv_%08d.out", thisSubCatchment->GetIdentifier());
     if ((fpGiv = fopen(fileName, "w")) == NULL)
     {
@@ -4842,10 +4842,10 @@ void WriteOutletWaterBalance(SubCatchment * const thisSubCatchment, DateTime sta
                     datetime.getDay(), datetime.getHour(), datetime.getMinute(),
                     thisSubCatchment->GetAccumulatedGlacierMassBalance(timeStep) * 1000.0 / thisSubCatchment->GetAccumulatedSumGlacier(timeStep));
             //              thisSubCatchment->GetAccumulatedGlacierMassBalance(timeStep)/thisSubCatchment->GetAccumulatedSumGlacier(timeStep));
-	    /*      fprintf(fpGim, "%4d%02d%02d/%02d%02d%16.6f\n", datetime.getYear(), datetime.getMonth(),
+	    fprintf(fpGim, "%4d%02d%02d/%02d%02d%16.6f\n", datetime.getYear(), datetime.getMonth(),
                     datetime.getDay(), datetime.getHour(), datetime.getMinute(),
                     thisSubCatchment->GetAccumulatedGlacierIceMelt(timeStep) * 1000.0 / thisSubCatchment->GetAccumulatedSum(timeStep));
-		    //              thisSubCatchment->GetAccumulatedGlacierIceMelt(timeStep)/thisSubCatchment->GetAccumulatedSumGlacier(timeStep));*/
+	    //              thisSubCatchment->GetAccumulatedGlacierIceMelt(timeStep)/thisSubCatchment->GetAccumulatedSumGlacier(timeStep));
             fprintf(fpGmc, "%4d%02d%02d/%02d%02d%16.6f\n", datetime.getYear(), datetime.getMonth(),
                     datetime.getDay(), datetime.getHour(), datetime.getMinute(),
                     thisSubCatchment->GetAccumulatedAreaGlacierMassBalance(timeStep) * 1000.0 / thisSubCatchment->GetAccumulatedSum(timeStep));
@@ -4861,8 +4861,8 @@ void WriteOutletWaterBalance(SubCatchment * const thisSubCatchment, DateTime sta
         {
             fprintf(fpGmb, "%4d%02d%02d/%02d%02d%16.6f\n", datetime.getYear(), datetime.getMonth(),
                     datetime.getDay(), datetime.getHour(), datetime.getMinute(), missingData);
-            /*	    fprintf(fpGim, "%4d%02d%02d/%02d%02d%16.6f\n", datetime.getYear(), datetime.getMonth(),
-                    datetime.getDay(), datetime.getHour(), datetime.getMinute(), missingData);*/
+            fprintf(fpGim, "%4d%02d%02d/%02d%02d%16.6f\n", datetime.getYear(), datetime.getMonth(),
+                    datetime.getDay(), datetime.getHour(), datetime.getMinute(), missingData);
             fprintf(fpGmc, "%4d%02d%02d/%02d%02d%16.6f\n", datetime.getYear(), datetime.getMonth(),
                     datetime.getDay(), datetime.getHour(), datetime.getMinute(), missingData);
 	    /*	    fprintf(fpGsw,"%4d%02d%02d/%02d%02d%16.6f\n", datetime.getYear(), datetime.getMonth(), 
@@ -4948,7 +4948,7 @@ void WriteOutletWaterBalance(SubCatchment * const thisSubCatchment, DateTime sta
     fclose(fpGmb);
     fclose(fpGmc);
     //    fclose(fpGsw);
-    //    fclose(fpGim);
+    fclose(fpGim);
     fclose(fpGiv);
     fclose(fpGam);
     fclose(fpEva);
